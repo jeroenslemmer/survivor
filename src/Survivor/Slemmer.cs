@@ -14,14 +14,19 @@ namespace Survivor
       Scout();
     }
 
-
     int scoutDirection = 1;
     private void Scout()
+    {
+      switchScoutDirectionAtBorder();
+      moveInScoutDirection();
+    }
+
+    private void switchScoutDirectionAtBorder()
     {
       switch (scoutDirection)
       {
         case 1:
-          if (X > ArenaWidth - 2) 
+          if (X > ArenaWidth - 2)
           {
             scoutDirection = 0;
           }
@@ -45,8 +50,10 @@ namespace Survivor
           }
           break;
       }
+    }
 
-      // Move in the scout direction
+    private void moveInScoutDirection()
+    {
       switch (scoutDirection)
       {
         case 0:
@@ -62,10 +69,7 @@ namespace Survivor
           MoveLeft();
           break;
       }
-
-
     }
-
 
   }
 }
