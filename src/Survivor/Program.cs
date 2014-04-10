@@ -10,8 +10,8 @@ namespace Survivor
             var game = new Game();
             game.FramesPerSecond = 5;
 
-            game.Add<DemoCreature>("Maximus");
-            game.Add<DemoCreature>("Antonius");
+            game.Add<Slemmer>("Jeroen");
+            //game.Add<DemoCreature>("Antonius");
 
             game.Run();
         }
